@@ -1,0 +1,9 @@
+<div class="container py-5">
+  <h1 class="mb-4">Add a movie to <%= @list.name %></h1>
+
+  <%= simple_form_for @bookmark, url: list_bookmarks_path(@list) do |f| %>
+    <%= f.association :movie, label: "Movie" %>
+    <%= f.input :comment, label: "Comment", placeholder: "Why does this movie belong here?" %>
+    <%= f.button :submit, "Add movie", class: "btn btn-success" %>
+  <% end %>
+</div>

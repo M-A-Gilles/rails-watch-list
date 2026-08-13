@@ -1,0 +1,34 @@
+<div class="hero-banner-show d-flex align-items-center position-relative text-white">
+  <h1 class="display-5 fw-bold px-5"><%= @list.name %></h1>
+  <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-4 px-3 py-2">
+    <%= pluralize(@list.movies.count, "movie") %>
+  </span>
+</div>
+
+<div class="container py-5">
+  <div class="text-end mb-4">
+    <%= link_to "add a movie", new_list_bookmark_path(@list), class: "btn btn-success" %>
+  </div>
+
+  <div class="row">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="<%= bookmark.movie.poster_url %>" class="card-img-top" alt="<%= bookmark.movie.title %>">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= bookmark.movie.title %> · <%= bookmark.movie.rating %> <i class="fa-solid fa-star text-warning"></i>
+            </h5>
+            <p class="card-text"><%= bookmark.movie.overview %></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text text-muted mb-0">
+                <i class="fa-solid fa-quote-left"></i> <%= bookmark.comment %>
+              </p>
+              <%= button_to "delete", "#", method: :delete, class: "btn btn-link text-danger p-0" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

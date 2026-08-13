@@ -10,3 +10,20 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.hero-banner {
+  height: 400px;
+  background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600") center/cover no-repeat;
+}
+
+.hero-banner-show {
+  height: 300px;
+  background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600") center/cover no-repeat;
+}
+
+.list-card {
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800") center/cover no-repeat;
+  border-radius: 8px;
+}

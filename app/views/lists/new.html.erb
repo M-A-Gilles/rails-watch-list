@@ -1,0 +1,8 @@
+<div class="container py-5">
+  <h1 class="mb-4">Create a new list</h1>
+
+  <%= simple_form_for @list, url: "/lists" do |f| %>
+    <%= f.input :name, label: "List name", placeholder: "e.g. Drama, Comedy, To rewatch..." %>
+    <%= f.button :submit, "Create list", class: "btn btn-success" %>
+  <% end %>
+</div>
