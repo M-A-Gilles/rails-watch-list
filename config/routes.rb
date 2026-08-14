@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   delete "bookmarks/:id",              to: "bookmarks#destroy", as: "bookmark"
 
   # root "controller_name#action_name"
+  root "lists#index"
 end
