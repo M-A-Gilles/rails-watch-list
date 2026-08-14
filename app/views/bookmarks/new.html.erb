@@ -1,5 +1,5 @@
 <div class="container py-5">
-  <h1 class="mb-4">Add a movie to <%= @list.name %></h1>
+  <h1 class="mb-4">Add a movie to your "<%= @list.name %>" list</h1>
 
   <%= simple_form_for @bookmark, url: list_bookmarks_path(@list) do |f| %>
     <%= f.association :movie, label: "Movie" %>
